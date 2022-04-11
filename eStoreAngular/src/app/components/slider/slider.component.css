@@ -1,0 +1,72 @@
+#container {
+  display: flex;
+  margin-top: 30px;
+  /* align-items: center; */
+}
+.inactive {
+  display: none;
+}
+img {
+  margin-left: 5%;
+  margin-right: 5%;
+  position: relative;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+a {
+  cursor: pointer;
+  position: relative;
+  top: 200px;
+  z-index: 2000;
+  height: 10%;
+  background-color: rgba(250, 231, 231, 0.322);
+}
+a:hover {
+  background-color: rgba(226, 224, 224, 0.808);
+}
+@media (max-width: 1115px) {
+  a {
+    top: 140px;
+  }
+}
+@media (max-width: 576px) {
+  a {
+    top: 100px;
+  }
+}
+#next {
+  right: 10%;
+}
+
+#pre {
+  right: 97%;
+}
+
+.svg-icon {
+  width: 3em;
+  height: 3em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: white;
+}
+
+.svg-icon circle {
+  stroke: white;
+  stroke-width: 1;
+}
+
+.svg-icon path:hover,
+.svg-icon polygon:hover,
+.svg-icon rect:hover {
+  fill: #00050a;
+}
+
+.svg-icon circle:hover {
+  stroke: #00050a;
+  stroke-width: 3;
+}

@@ -1,0 +1,48 @@
+strong{
+  font-size: 30px;
+  font-family:  'Brush Script MT ' , cursive;
+  margin-left: 5%;
+  color: rgb(33, 144, 172);
+}
+
+
+.svg-icon {
+  width: 1.6em;
+  height: 1.6em;
+  cursor: pointer;
+}
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: rgb(33, 144, 172);
+}
+.svg-icon circle {
+  stroke: rgb(33, 144, 172);
+  stroke-width: 1;
+}
+
+
+#navy{
+  display: flex;
+  justify-content: space-around;
+  height: 10vh;
+  color: rgb(33, 144, 172);
+  height: 13vh;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.205);
+  background-color: rgba(236, 231, 231, 0.658);
+}
+nav a{
+  font-size: 23px;
+  font-weight: 700;
+  color: rgb(33, 144, 172);
+
+}
+nav a:hover{
+color: rgb(235, 85, 26);
+
+}
+
+#el{
+  display: flex;
+  justify-content: start;
+}

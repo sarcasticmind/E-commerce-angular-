@@ -1,0 +1,74 @@
+<div id="container">
+  <div>
+    <div class="text-center">
+      <h3>Register Now!</h3>
+    </div>
+    <form [formGroup]="userValidation" #form="ngForm">
+      <div class="form-group">
+        <label for="nam">Username</label>
+        <input
+          type="text"
+          id="nam"
+          class="form-control"
+          [(ngModel)]="myservice.formRegister.User_Name"
+          placeholder="Name can't be less than 3 letters"
+          formControlName="username"
+        />
+        <div class="form-text text-danger" *ngIf="!getUsername.valid">
+          error : {{ getUsername.errors | jsonstring }}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="em">Email address</label>
+        <input
+          type="email"
+          id="em"
+          class="form-control"
+          [(ngModel)]="myservice.formRegister.User_Email"
+          aria-describedby="emailHelp"
+          placeholder="Enter a valid email"
+          formControlName="email"
+        />
+        <div class="form-text text-danger" *ngIf="!getEmail.valid">
+          error : {{ getEmail.errors | jsonstring }}
+        </div>
+        <div class="form-text text-danger">
+          {{ errorMsg }}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="pass">Password</label>
+        <input
+          type="password"
+          [(ngModel)]="myservice.formRegister.User_Password"
+          class="form-control"
+          id="pass"
+          placeholder=" 6 charchters or more"
+          formControlName="password"
+        />
+        <div class="form-text text-danger" *ngIf="!getPassword.valid">
+          error : {{ getPassword.errors | jsonstring }}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cpass">Confirm Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="cpass"
+          formControlName="confirmPassword"
+        />
+        <div class="form-text text-danger" *ngIf="!getConfirmpassword.valid">
+          error : Password doesn't match
+        </div>
+      </div>
+      <br />
+      <a style="color: rgb(14, 34, 88); margin-top: 10px" routerLink="/"
+        >Already have an account? Log in!</a
+      >
+      <br />
+      <br />
+      <a (click)="onSubmit()" class="btn btn-primary">Regiter</a>
+    </form>
+  </div>
+</div>

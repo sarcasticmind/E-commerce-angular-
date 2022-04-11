@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-md-12 col-12 mt-5 mb-5">
+      <form [formGroup]="myValidation" #form="ngForm">
+        <input type="hidden" name="id" [value]="myService.formData.id" />
+        <div class="form-group mb-2">
+          <label class="form-label">Product Name</label>
+          <input
+            [(ngModel)]="myService.formData.name"
+            class="form-control form-control-lg"
+            formControlName="name"
+          />
+          <div
+            id="nameHelp"
+            class="form-text text-danger"
+            *ngIf="!getName.valid"
+          >
+            error : {{ getName.errors | jsonstring }}
+          </div>
+        </div>
+        <!-- <app-upload (onUploadFinished)="uploadFinished($event)"></app-upload> -->
+        <div class="form-group mb-2">
+          <label class="form-label">Product Image</label>
+          <input
+            class="form-control form-control-lg"
+            name="myService.formData.image"
+            type="file"
+            [(ngModel)]="myService.formData.image"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            minlength="3"
+          />
+        </div>
+        <div class="form-group mb-2">
+          <label class="form-label">Product Price</label>
+          <input
+            [(ngModel)]="myService.formData.price"
+            type="number"
+            min="1"
+            class="form-control form-control-lg"
+            formControlName="price"
+          />
+          <div
+            id="priceHelp"
+            class="form-text text-danger"
+            *ngIf="!getPrice.valid"
+          >
+            price can't be <= 0
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            (click)="onSubmit()"
+            [disabled]="form.invalid"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-7 col-md-12 col-12">
+      <app-product-list></app-product-list>
+    </div>
+  </div>
+</div>

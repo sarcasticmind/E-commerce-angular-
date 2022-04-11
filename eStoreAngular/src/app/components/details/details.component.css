@@ -1,0 +1,55 @@
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 200px;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+#cart {
+  display: flex;
+  justify-content: space-around;
+}
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+h3{
+  font-size: xx-large;
+  color: rgb(32, 13, 13);
+}
+p span{
+  color: orangered;
+}
+p{
+font-size: large; font-weight: bold;
+}
+.svg-icon {
+  width: 2.3em;
+  height: 2.3em;
+  cursor: pointer;
+}
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+.svg-icon path:hover,
+.svg-icon polygon:hover,
+.svg-icon rect:hover {
+  fill: #5c1fad;
+}
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+.svg-icon circle:hover {
+  stroke: #5c1fad;
+  stroke-width: 1;
+}
+.list {
+  line-height: 40px;
+}
+.list:hover {
+  color: #5c1fad;
+}

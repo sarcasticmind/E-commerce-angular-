@@ -1,0 +1,6 @@
+ #container {
+  width: fit-content;
+  padding: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.151);
+  margin: 50px 35% 50px 35%;
+}
